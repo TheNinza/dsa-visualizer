@@ -75,7 +75,7 @@ const HomePage = (props) => {
             onClick={handleDrawerToggle}
             className={classes.menuButton}
           >
-            <MenuIcon />
+            <MenuIcon color="primary" />
           </IconButton>
           <Box className={classes.logo} color="textPrimary" component="div">
             <img
