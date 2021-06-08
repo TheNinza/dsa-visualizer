@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -13,10 +13,16 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { useTheme } from "@material-ui/core/styles";
 import { Route, Switch, useHistory } from "react-router";
-import HomePageIntroduction from "../../components/homepage-introduction/homepage-introduction";
 import { useStylesHomepage } from "./homepage.styles";
+import Loader from "../../components/loader/loader";
+
+// lazy imports
+
+const HomePageIntroduction = lazy(() =>
+  import("../../components/homepage-introduction/homepage-introduction")
+);
 
 const HomePage = (props) => {
   const { window } = props;
@@ -122,12 +128,18 @@ const HomePage = (props) => {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Switch>
-          <Route path="/" exact component={HomePageIntroduction} />
-        </Switch>
-        <Switch>
-          <Route path="/introduction" exact component={HomePageIntroduction} />
-        </Switch>
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <Route path="/" exact component={HomePageIntroduction} />
+          </Switch>
+          <Switch>
+            <Route
+              path="/introduction"
+              exact
+              component={HomePageIntroduction}
+            />
+          </Switch>
+        </Suspense>
       </main>
     </div>
   );

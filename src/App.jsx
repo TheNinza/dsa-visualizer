@@ -1,4 +1,3 @@
-import { CircularProgress } from "@material-ui/core";
 import { lazy, Suspense } from "react";
 import { Route, Switch } from "react-router";
 import "./App.css";

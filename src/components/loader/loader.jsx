@@ -1,4 +1,4 @@
-import { Box, CircularProgress, makeStyles } from "@material-ui/core";
+import { CircularProgress } from "@material-ui/core";
 
 const Loader = ({ homepage = false }) => {
   return (
