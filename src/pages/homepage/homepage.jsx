@@ -131,8 +131,6 @@ const HomePage = (props) => {
         <Suspense fallback={<Loader />}>
           <Switch>
             <Route path="/" exact component={HomePageIntroduction} />
-          </Switch>
-          <Switch>
             <Route
               path="/introduction"
               exact
