@@ -1,23 +1,26 @@
-import { lazy, Suspense } from "react";
-import { Route, Switch } from "react-router";
-import "./App.css";
-import Footer from "./components/footer/footer";
+import { Suspense, lazy } from "react";
 import Loader from "./components/loader/loader";
+import Navbar from "./components/navbar/navbar";
+import { Switch, Route } from "react-router-dom";
 
-// lazy loading pages
+// lazy imports
 const Homepage = lazy(() => import("./pages/homepage/homepage"));
+const Objective = lazy(() => import("./pages/objective/objective"));
 
 function App() {
   return (
-    <div className="App">
-      <Suspense fallback={<Loader homepage={true} />}>
-        <Switch>
-          <Route path="/" component={Homepage} />
-        </Switch>
-
-        <Footer />
-      </Suspense>
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route exact path="/introduction" component={Homepage} />
+            <Route exact path="/objective" component={Objective} />
+          </Switch>
+        </Suspense>
+      </main>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
-export const useStylesHomepage = makeStyles((theme) => ({
+export const useStylesObjective = makeStyles((theme) => ({
   root: {
     marginTop: "3rem",
     display: "flex",

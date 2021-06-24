@@ -1,6 +1,6 @@
 import { CircularProgress } from "@material-ui/core";
 
-const Loader = ({ homepage = false }) => {
+const Loader = () => {
   return (
     <div
       style={{
@@ -8,7 +8,7 @@ const Loader = ({ homepage = false }) => {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        height: homepage ? "100vh" : "100%",
+        height: "100%",
       }}
     >
       <CircularProgress />

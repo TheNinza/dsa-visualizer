@@ -1,13 +1,13 @@
 import { Typography } from "@material-ui/core";
-import { useStylesHomepage } from "./homepage.styles";
+import { useStylesObjective } from "./objective.styles";
 
-const Homepage = () => {
-  const classes = useStylesHomepage();
+const Objective = () => {
+  const classes = useStylesObjective();
 
   return (
     <div className={classes.root}>
       <Typography gutterBottom color="primary" variant="h3">
-        Homepage
+        Objective
       </Typography>
       <Typography paragraph variant="h6">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
@@ -126,4 +126,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Objective;
