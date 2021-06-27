@@ -9,6 +9,9 @@ const Objective = lazy(() => import("./pages/objective/objective"));
 const ExperimentList = lazy(() =>
   import("./pages/experiment-list/experiment-list.jsx")
 );
+const IndividualExperiment = lazy(() =>
+  import("./pages/individual-experiment/individual-experiment.jsx")
+);
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
               component={ExperimentList}
             />
             <Route exact path="/experiments" component={ExperimentList} />
+            <Route path="/experiments/:id" component={IndividualExperiment} />
           </Switch>
         </Suspense>
       </main>
