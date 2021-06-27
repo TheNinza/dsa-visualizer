@@ -25,6 +25,7 @@ function App() {
               path="/list_of_experiments"
               component={ExperimentList}
             />
+            <Route exact path="/experiments" component={ExperimentList} />
           </Switch>
         </Suspense>
       </main>
