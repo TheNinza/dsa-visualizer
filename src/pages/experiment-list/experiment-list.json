@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Graphs",
+    "subSection": [
+      { "name": "BFS(Breadth First Search)", "route": "/bfs" },
+      { "name": "DFS(Depth First Search", "route": "/dfs" }
+    ]
+  }
+]
