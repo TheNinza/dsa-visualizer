@@ -18,6 +18,9 @@ export const useStylesIndividualExperiment = makeStyles((theme) => ({
     minHeight: "75vh",
     background: "white",
     marginTop: "2rem",
+    display: "flex",
+    flexDirection: "column",
+    padding: "1rem",
   },
 
   tabs: {

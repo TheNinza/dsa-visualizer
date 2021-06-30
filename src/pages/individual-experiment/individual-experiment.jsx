@@ -9,15 +9,13 @@ import {
   Route,
 } from "react-router-dom";
 import Loader from "../../components/loader/loader";
+import Visualisation from "../../components/visualisation/visualisation";
 import { useStylesIndividualExperiment } from "./individual-experiment.styles";
 
 const IndividualExperiment = () => {
   // router
-  const { id } = useParams();
   const location = useLocation();
-  console.log(location);
   const match = useRouteMatch();
-  console.log(match);
 
   // styles
   const classes = useStylesIndividualExperiment();
@@ -102,7 +100,7 @@ const IndividualExperiment = () => {
             <div>Code</div>
           </Route>
           <Route exact path={tabs[3].pathname}>
-            <div>Visuals</div>
+            <Visualisation param={match.params.id} />
           </Route>
         </Switch>
         {/* </Suspense> */}
