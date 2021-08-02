@@ -38,7 +38,7 @@ function Line(n1, n2, color, cv, d, weight, anchorIndex) {
       var frameMod = frameNum / 14.0;
       var delta = Math.abs((frameMod % (2 * LINE_range - 2)) - LINE_range + 1);
       this.highlightDiff = delta + LINE_minHeightDiff;
-      Dirty = true;
+      Dirty = true; //
     }
   };
 

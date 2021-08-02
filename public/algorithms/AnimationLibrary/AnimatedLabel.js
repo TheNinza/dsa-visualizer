@@ -189,7 +189,7 @@ AnimatedLabel.prototype.getWidth = function () {
 };
 
 AnimatedLabel.prototype.getHeight = function () {
-  return 10; // HACK!  HACK!  HACK!  HACK!
+  return 10;
 };
 
 AnimatedLabel.prototype.setHighlight = function (value) {

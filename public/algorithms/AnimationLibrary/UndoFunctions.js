@@ -257,6 +257,7 @@ UndoHighlightEdge.prototype = new UndoBlock();
 UndoHighlightEdge.prototype.constructor = UndoHighlightEdge;
 
 UndoHighlightEdge.prototype.undoInitialStep = function (world) {
+  //
   world.setEdgeHighlight(this.fromID, this.toID, this.highlightValue);
 };
 
@@ -291,7 +292,7 @@ UndoSetEdgeAlpha.prototype = new UndoBlock();
 UndoSetEdgeAlpha.prototype.constructor = UndoSetEdgeAlpha;
 
 UndoSetEdgeAlpha.prototype.undoInitialStep = function (world) {
-  world.setEdgeAlpha(this.fromID, this.toID, this.alpha);
+  world.setEdgeAlpha(this.fromID, this.toID, this.alpha); //
 };
 
 ////////////////////////////////////////////////////////////
@@ -308,5 +309,6 @@ UndoSetPosition.prototype = new UndoBlock();
 UndoSetPosition.prototype.constructor = UndoSetPosition;
 
 UndoSetPosition.prototype.undoInitialStep = function (world) {
+  //
   world.setNodePosition(this.objectID, this.x, this.y);
 };
