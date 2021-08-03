@@ -118,7 +118,7 @@ const Code = ({ param }) => {
   const languageArray = ["c", "cpp", "py"];
 
   // custom functions
-  const handleChange = (event, newValue) => {
+  const handleChange = (_event, newValue) => {
     setValue(newValue);
   };
 
