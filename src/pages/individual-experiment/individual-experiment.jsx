@@ -17,6 +17,7 @@ const Visualisation = lazy(() =>
   import("../../components/visualisation/visualisation.jsx")
 );
 const Theory = lazy(() => import("../../components/theory/theory.jsx"));
+const Code = lazy(() => import("../../components/code/code.jsx"));
 
 const IndividualExperiment = () => {
   // router
@@ -103,7 +104,7 @@ const IndividualExperiment = () => {
               <Theory param={match.params.id} />
             </Route>
             <Route exact path={tabs[2].pathname}>
-              <div>Code</div>
+              <Code param={match.params.id} />
             </Route>
             <Route exact path={tabs[3].pathname}>
               <Visualisation param={match.params.id} />
