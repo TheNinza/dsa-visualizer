@@ -7,7 +7,11 @@ const Visualisation = ({ param }) => {
   console.log(param);
   return (
     <div className={classes.root}>
-      <iframe className={classes.iframe} src={visualisationMap[param]} />
+      <iframe
+        title={param}
+        className={classes.iframe}
+        src={visualisationMap[param]}
+      />
     </div>
   );
 };
