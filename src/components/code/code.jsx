@@ -111,7 +111,7 @@ const Code = ({ param }) => {
   const classes = useStylesCode();
 
   // local state
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
   const [isDarkTheme, setIsDarkTheme] = useState(0);
 
   // constants
