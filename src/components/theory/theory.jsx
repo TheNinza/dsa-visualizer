@@ -9,7 +9,7 @@ import Loader from "../loader/loader";
 import { useStylesTheory } from "./theory.styles";
 
 /**
- * Passing support for syntax hightlighting in code
+ * Passing support for syntax hightlighting in markdown
  */
 
 const components = {
