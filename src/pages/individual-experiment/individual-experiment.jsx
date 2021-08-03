@@ -1,16 +1,22 @@
 import { Tab, Tabs } from "@material-ui/core";
+import { lazy } from "react";
 import { Suspense, useEffect, useState } from "react";
 import {
   Link,
   useLocation,
-  useParams,
   useRouteMatch,
   Switch,
   Route,
 } from "react-router-dom";
 import Loader from "../../components/loader/loader";
-import Visualisation from "../../components/visualisation/visualisation.jsx";
 import { useStylesIndividualExperiment } from "./individual-experiment.styles";
+
+// Dynamic Imports
+
+const Visualisation = lazy(() =>
+  import("../../components/visualisation/visualisation.jsx")
+);
+const Theory = lazy(() => import("../../components/theory/theory.jsx"));
 
 const IndividualExperiment = () => {
   // router
@@ -88,22 +94,22 @@ const IndividualExperiment = () => {
       </Tabs>
 
       <div className={classes.container}>
-        {/* <Suspense fallback={<Loader />}> */}
-        <Switch>
-          <Route exact path={tabs[0].pathname}>
-            <div>Aim</div>
-          </Route>
-          <Route exact path={tabs[1].pathname}>
-            <div>Theory</div>
-          </Route>
-          <Route exact path={tabs[2].pathname}>
-            <div>Code</div>
-          </Route>
-          <Route exact path={tabs[3].pathname}>
-            <Visualisation param={match.params.id} />
-          </Route>
-        </Switch>
-        {/* </Suspense> */}
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <Route exact path={tabs[0].pathname}>
+              <div>Aim</div>
+            </Route>
+            <Route exact path={tabs[1].pathname}>
+              <Theory param={match.params.id} />
+            </Route>
+            <Route exact path={tabs[2].pathname}>
+              <div>Code</div>
+            </Route>
+            <Route exact path={tabs[3].pathname}>
+              <Visualisation param={match.params.id} />
+            </Route>
+          </Switch>
+        </Suspense>
       </div>
     </div>
   );
