@@ -54,12 +54,10 @@ AnimatedObject.prototype.getHighlight = function () {
 };
 
 AnimatedObject.prototype.getWidth = function () {
-  // TODO:  Do we want to throw here?  Should always override this ...
   return 0;
 };
 
 AnimatedObject.prototype.getHeight = function () {
-  // TODO:  Do we want to throw here?  Should always override this ...
   return 0;
 };
 
@@ -71,9 +69,7 @@ AnimatedObject.prototype.centerX = function () {
   return this.x;
 };
 
-AnimatedObject.prototype.setWidth = function (newWidth) {
-  // TODO:  Do we want to throw here?  Should always override this ...
-};
+AnimatedObject.prototype.setWidth = function (newWidth) {};
 
 AnimatedObject.prototype.centerY = function () {
   return this.y;
@@ -119,38 +115,6 @@ AnimatedObject.prototype.alignBottom = function (otherObject) {
   this.x = otherObject.centerX();
   this.y = otherObject.bottom() + this.getHeight() / 2;
 };
-
-/* TODO:  Do we need these in the base? 		
-		function left(): Number
-		{
-			return x - getWidth() / 2;
-		}
-		
-		function right():Number
-		{
-			return x + getWidth() / 2;
-		}
-		
-		function top():Number
-		{
-			return y - getHeight() / 2;
-		}
-		
-		function bottom():Number
-		{
-			return y + getHeight() / 2;
-		}
-		
-		function centerX():Number
-		{
-			return x;
-		}
-		
-		function centerY():Number
-		{
-			return y;
-		}
-		*/
 
 AnimatedObject.prototype.getClosestCardinalPoint = function (fromX, fromY) {
   var xDelta;
@@ -213,12 +177,6 @@ AnimatedObject.prototype.getHeadPointerAttachPos = function (fromX, fromY) {
   return [this.x, this.y];
 };
 
-/*public function createUndoDelete() : UndoBlock
-{
-			// Must be overriden!
-			return null;
-}
-*/
 AnimatedObject.prototype.identifier = function () {
   return this.objectID;
 };

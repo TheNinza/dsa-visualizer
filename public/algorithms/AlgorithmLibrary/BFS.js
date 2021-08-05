@@ -38,7 +38,7 @@ BFS.prototype.addControls = function () {
 
 BFS.prototype.init = function (am, w, h) {
   showEdgeCosts = false;
-  BFS.superclass.init.call(this, am, w, h); // TODO:  add no edge label flag to this?
+  BFS.superclass.init.call(this, am, w, h);
   // Setup called in base class constructor
 };
 

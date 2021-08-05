@@ -11,8 +11,6 @@ function addLabelToAlgorithmBar(labelName) {
   return element;
 }
 
-// TODO:  Make this stackable like radio butons
-//        (keep backwards compatible, thought)
 function addCheckboxToAlgorithmBar(boxLabel) {
   var element = document.createElement("input");
 
@@ -66,7 +64,6 @@ function addControlToAlgorithmBar(type, name) {
 
   element.setAttribute("type", type);
   element.setAttribute("value", name);
-  //    element.setAttribute("name", name);
 
   var tableEntry = document.createElement("td");
 

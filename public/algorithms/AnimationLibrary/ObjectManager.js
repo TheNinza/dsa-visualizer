@@ -220,7 +220,6 @@ function ObjectManager() {
 
   this.setHighlight = function (nodeID, val) {
     if (this.Nodes[nodeID] == null || this.Nodes[nodeID] == undefined) {
-      // TODO:  Error here?
       return;
     }
     this.Nodes[nodeID].setHighlight(val);
@@ -228,7 +227,6 @@ function ObjectManager() {
 
   this.getHighlight = function (nodeID) {
     if (this.Nodes[nodeID] == null || this.Nodes[nodeID] == undefined) {
-      // TODO:  Error here?
       return false;
     }
     return this.Nodes[nodeID].getHighlight();
@@ -236,7 +234,6 @@ function ObjectManager() {
 
   this.getHighlightIndex = function (nodeID) {
     if (this.Nodes[nodeID] == null || this.Nodes[nodeID] == undefined) {
-      // TODO:  Error here?
       return false;
     }
     return this.Nodes[nodeID].getHighlightIndex();
@@ -244,7 +241,6 @@ function ObjectManager() {
 
   this.setWidth = function (nodeID, val) {
     if (this.Nodes[nodeID] == null || this.Nodes[nodeID] == undefined) {
-      // TODO:  Error here?
       return;
     }
     this.Nodes[nodeID].setWidth(val);
@@ -252,7 +248,6 @@ function ObjectManager() {
 
   this.setHeight = function (nodeID, val) {
     if (this.Nodes[nodeID] == null || this.Nodes[nodeID] == undefined) {
-      // TODO:  Error here?
       return;
     }
     this.Nodes[nodeID].setHeight(val);
@@ -260,7 +255,6 @@ function ObjectManager() {
 
   this.getHeight = function (nodeID) {
     if (this.Nodes[nodeID] == null || this.Nodes[nodeID] == undefined) {
-      // TODO:  Error here?
       return -1;
     }
     return this.Nodes[nodeID].getHeight();
@@ -268,7 +262,6 @@ function ObjectManager() {
 
   this.getWidth = function (nodeID) {
     if (this.Nodes[nodeID] == null || this.Nodes[nodeID] == undefined) {
-      // TODO:  Error here?
       return -1;
     }
     return this.Nodes[nodeID].getWidth();
@@ -496,7 +489,6 @@ function ObjectManager() {
     if (this.Nodes[objectID] != null && this.Nodes[objectID] != undefined) {
       return this.Nodes[objectID].getNull();
     }
-    return false; // TODO:  Error here?
   };
 
   this.setEdgeColor = function (
@@ -754,7 +746,6 @@ function ObjectManager() {
 
   this.setNodePosition = function (nodeID, newX, newY) {
     if (this.Nodes[nodeID] == null || this.Nodes[nodeID] == undefined) {
-      // TODO:  Error here?
       return;
     }
     if (newX == undefined || newY == undefined) {
