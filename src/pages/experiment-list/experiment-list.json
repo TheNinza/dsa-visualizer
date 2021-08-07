@@ -1,9 +1,21 @@
 [
   {
-    "name": "Graphs",
+    "name": "Graph",
     "subSection": [
       { "name": "BFS(Breadth First Search)", "route": "bfs" },
-      { "name": "DFS(Depth First Search", "route": "dfs" }
+      { "name": "DFS(Depth First Search)", "route": "dfs" },
+      { "name": "Topological Sort", "route": "topo" },
+      { "name": "Kruskal's Algorithm", "route": "kruskals" },
+      { "name": "Prim's Algorithm", "route": "prims" }
+    ]
+  },
+  {
+    "name": "Tree",
+    "subSection": [
+      { "name": "Binary Search Tree(Array Based)", "route": "bstarr" },
+      { "name": "Binary Search Tree(Linked List Based)", "route": "bstll" },
+      { "name": "AVL(Adelson-Velsky and Landis) Tree", "route": "avl" },
+      { "name": "B-Tree", "route": "btree" }
     ]
   }
 ]
