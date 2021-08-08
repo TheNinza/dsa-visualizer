@@ -1,12 +1,35 @@
 [
   {
-    "name": "Graph",
+    "name": "Sorting Algorithms",
     "subSection": [
-      { "name": "BFS(Breadth First Search)", "route": "bfs" },
-      { "name": "DFS(Depth First Search)", "route": "dfs" },
-      { "name": "Topological Sort", "route": "topo" },
-      { "name": "Kruskal's Algorithm", "route": "kruskals" },
-      { "name": "Prim's Algorithm", "route": "prims" }
+      { "name": "Bubble Sort", "route": "bblsort" },
+      { "name": "Selection Sort", "route": "selsort" },
+      { "name": "Insertion Sort", "route": "inssort" },
+      { "name": "Merge Sort", "route": "mrgsort" },
+      { "name": "Quick Sort", "route": "qcksort" }
+    ]
+  },
+  {
+    "name": "Array",
+    "subSection": [
+      { "name": "One Dimentional Array", "route": "oda" },
+      { "name": "Two Dimentional Array", "route": "tda" }
+    ]
+  },
+  {
+    "name": "Linked List",
+    "subSection": [
+      { "name": "Singly Linked List", "route": "sll" },
+      { "name": "Doubly Linked List", "route": "dll" },
+      { "name": "Array based Singly Linked List ", "route": "all" }
+    ]
+  },
+  {
+    "name": "Stack and Queue",
+    "subSection": [
+      { "name": "Stack", "route": "stk" },
+      { "name": "Queue", "route": "que" },
+      { "name": "Deque (Double Ended Queue)", "route": "deq" }
     ]
   },
   {
@@ -16,6 +39,16 @@
       { "name": "Binary Search Tree(Linked List Based)", "route": "bstll" },
       { "name": "AVL(Adelson-Velsky and Landis) Tree", "route": "avl" },
       { "name": "B-Tree", "route": "btree" }
+    ]
+  },
+  {
+    "name": "Graph",
+    "subSection": [
+      { "name": "BFS(Breadth First Search)", "route": "bfs" },
+      { "name": "DFS(Depth First Search)", "route": "dfs" },
+      { "name": "Topological Sort", "route": "topo" },
+      { "name": "Kruskal's Algorithm", "route": "kruskals" },
+      { "name": "Prim's Algorithm", "route": "prims" }
     ]
   }
 ]
