@@ -18,8 +18,8 @@ const ExperimentList = () => {
       </Typography> */}
 
       <List className={classes.listRoot}>
-        {experiments.map(({ name, subSection }) => (
-          <NestedListItem name={name} subsection={subSection} />
+        {experiments.map(({ name, subSection }, idx) => (
+          <NestedListItem name={name} subsection={subSection} key={idx} />
         ))}
       </List>
     </div>

@@ -10,9 +10,20 @@ export const useStylesCode = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     gap: "2rem",
+
+    [theme.breakpoints.down("800")]: {
+      flexDirection: "column",
+      gap: "1rem",
+    },
   },
   codeContainer: {
     maxWidth: 800,
     marginTop: "2rem",
+    minHeight: "65vh",
+  },
+  notFound: {
+    margin: "auto",
+    textAlign: "center",
+    lineHeight: "40vw",
   },
 }));

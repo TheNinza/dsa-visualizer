@@ -31,9 +31,9 @@ const NestedListItem = ({ name, subsection }) => {
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List className={classes.listRoot} component="div" disablePadding>
-          {subsection.map((i) => (
+          {subsection.map((i, idx) => (
             <ListItem
-              key={i}
+              key={idx}
               button
               className={classes.nested}
               onClick={() => changeRoute(i.route)}
