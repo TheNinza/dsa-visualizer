@@ -7,6 +7,7 @@ body {
   padding: 0;
   text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
   color: #000000;
+  min-height: 100% !important;
 }
 
 .VisualizationMainPage #mainContent {
@@ -103,6 +104,17 @@ EM {
 
 #AlgorithmSpecificControls {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+#AlgorithmSpecificControls > td {
+  margin-right: 25px;
+  margin-left: 10px;
+}
+#AlgorithmSpecificControls > td:nth-child(2n) {
+  margin-right: 55px;
 }
 
 input[type="button"] {
@@ -123,4 +135,12 @@ input[type="button"]:active {
 
 #GeneralAnimationControls {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+canvas {
+  max-width: 100% !important;
 }
