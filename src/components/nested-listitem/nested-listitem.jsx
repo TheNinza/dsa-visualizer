@@ -12,7 +12,7 @@ const NestedListItem = ({ name, subsection }) => {
   const classes = useStylesNestedListItem();
 
   // local states
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   // custom functions
   const handleClick = () => {
