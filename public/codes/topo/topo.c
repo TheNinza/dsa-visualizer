@@ -138,3 +138,6 @@ int main()
     TS(n);
     return 0;
 }
+
+// Output:
+// Topological Order is : 0 1 4 7 8 10 6 9 5 2 3

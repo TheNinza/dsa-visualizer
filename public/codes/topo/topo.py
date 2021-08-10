@@ -107,3 +107,6 @@ addEdge(g, 7, 9)
 addEdge(g, 8, 10)
 
 TS(g, n)
+
+# Output:
+# Topological Order is : 0 1 4 7 8 10 6 9 5 2 3

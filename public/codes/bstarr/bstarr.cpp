@@ -149,3 +149,12 @@ int main(){
     cout << "]" << endl << endl;
     return 0;
 }
+
+// Output:
+// bst array is : [4, 2, 6, 0, 3, 5, 10, -1, -1, -1, -1, -1, -1, 8, 12, ]
+
+// Inorder Traversal is : [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, ]
+
+// Inorder Traversal is : [0, 3, 4, 5, 6, 7, 8, 9, 10, 12, ]
+
+// bst array is : [4, 0, 6, -1, 3, 5, 10, -1, -1, -1, -1, -1, -1, 8, 12, ]

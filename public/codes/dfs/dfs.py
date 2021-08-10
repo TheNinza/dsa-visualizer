@@ -90,3 +90,6 @@ addEdge(g, 7, 9)
 addEdge(g, 8, 10)
 
 DFS(g, n)
+
+# Output:
+# DFS Order is : 0 1 2 3 4 5 6 9 7 8 10

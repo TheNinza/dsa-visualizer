@@ -334,3 +334,8 @@ int main()
 	return 0;
 }
 
+// Output:
+// Preorder traversal of the constructed AVL tree is 
+// 4 2 0 3 8 6 5 7 10 9 12 
+// Preorder traversal after deletion of 2
+// 4 0 3 8 6 5 7 10 9 12

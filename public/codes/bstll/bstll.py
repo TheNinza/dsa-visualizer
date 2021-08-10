@@ -163,3 +163,18 @@ root = deleteNode(root, 10)
 print("Inorder traversal of the modified tree")
 inorder(root)
 print("\n12 exists in bst? : ", searchNode(root, 12))
+
+
+# Output:
+# Inorder traversal of the given tree
+# 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12,
+# Delete 2
+# Inorder traversal of the modified tree
+# 0, 3, 4, 5, 6, 7, 8, 9, 10, 12,
+# Delete 3
+# Inorder traversal of the modified tree
+# 0, 4, 5, 6, 7, 8, 9, 10, 12,
+# Delete 10
+# Inorder traversal of the modified tree
+# 0, 4, 5, 6, 7, 8, 9, 12,
+# 12 exists in bst? :  True

@@ -1,6 +1,6 @@
 // C program for AVL Tree insertion and deletion
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 // An AVL tree node
 struct Node
@@ -22,20 +22,20 @@ int height(struct Node *N)
 // A utility function to get maximum of two integers
 int max(int a, int b)
 {
-	return (a > b)? a : b;
+	return (a > b) ? a : b;
 }
 
 /* Helper function that allocates a new node with the given key and
 	NULL left and right pointers. */
-struct Node* newNode(int key)
+struct Node *newNode(int key)
 {
-	struct Node* node = (struct Node*)
-						malloc(sizeof(struct Node));
+	struct Node *node = (struct Node *)
+		malloc(sizeof(struct Node));
 	node->key = key;
 	node->left = NULL;
 	node->right = NULL;
 	node->height = 1; // new node is initially added at leaf
-	return(node);
+	return (node);
 }
 
 // A utility function to right rotate subtree rooted with y
@@ -49,8 +49,8 @@ struct Node *rightRotate(struct Node *y)
 	y->left = T2;
 
 	// Update heights
-	y->height = max(height(y->left), height(y->right))+1;
-	x->height = max(height(x->left), height(x->right))+1;
+	y->height = max(height(y->left), height(y->right)) + 1;
+	x->height = max(height(x->left), height(x->right)) + 1;
 
 	// Return new root
 	return x;
@@ -67,8 +67,8 @@ struct Node *leftRotate(struct Node *x)
 	x->right = T2;
 
 	// Update heights
-	x->height = max(height(x->left), height(x->right))+1;
-	y->height = max(height(y->left), height(y->right))+1;
+	x->height = max(height(x->left), height(x->right)) + 1;
+	y->height = max(height(y->left), height(y->right)) + 1;
 
 	// Return new root
 	return y;
@@ -82,11 +82,11 @@ int getBalance(struct Node *N)
 	return height(N->left) - height(N->right);
 }
 
-struct Node* insert(struct Node* node, int key)
+struct Node *insert(struct Node *node, int key)
 {
 	/* 1. Perform the normal BST rotation */
 	if (node == NULL)
-		return(newNode(key));
+		return (newNode(key));
 
 	if (key < node->key)
 		node->left = insert(node->left, key);
@@ -97,7 +97,7 @@ struct Node* insert(struct Node* node, int key)
 
 	/* 2. Update height of this ancestor node */
 	node->height = 1 + max(height(node->left),
-						height(node->right));
+						   height(node->right));
 
 	/* 3. Get the balance factor of this ancestor
 		node to check whether this node became
@@ -132,14 +132,13 @@ struct Node* insert(struct Node* node, int key)
 	return node;
 }
 
-
 /* Given a non-empty binary search tree, return the
 node with maximum key value found in that tree.
 Note that the entire tree does not need to be
 searched. */
-struct Node * maxValueNode(struct Node* node)
+struct Node *maxValueNode(struct Node *node)
 {
-	struct Node* current = node;
+	struct Node *current = node;
 
 	/* loop down to find the leftmost leaf */
 	while (current->right != NULL)
@@ -151,7 +150,7 @@ struct Node * maxValueNode(struct Node* node)
 // Recursive function to delete a node with given key
 // from subtree with given root. It returns root of
 // the modified subtree.
-struct Node* deleteNode(struct Node* root, int key)
+struct Node *deleteNode(struct Node *root, int key)
 {
 	// STEP 1: Perform Standard BST Delete
 
@@ -160,12 +159,12 @@ struct Node* deleteNode(struct Node* root, int key)
 
 	// If the key to be deleted is smaller than the
 	// root's key, then it lies in left subtree
-	if ( key < root->key )
+	if (key < root->key)
 		root->left = deleteNode(root->left, key);
 
 	// If the key to be deleted is greater than the
 	// root's key, then it lies in right subtree
-	else if( key > root->key )
+	else if (key > root->key)
 		root->right = deleteNode(root->right, key);
 
 	// if key is same as root's key, then This is
@@ -173,10 +172,9 @@ struct Node* deleteNode(struct Node* root, int key)
 	else
 	{
 		// node with only one child or no child
-		if( (root->left == NULL) || (root->right == NULL) )
+		if ((root->left == NULL) || (root->right == NULL))
 		{
-			struct Node *temp = root->left ? root->left :
-											root->right;
+			struct Node *temp = root->left ? root->left : root->right;
 
 			// No child case
 			if (temp == NULL)
@@ -184,16 +182,16 @@ struct Node* deleteNode(struct Node* root, int key)
 				temp = root;
 				root = NULL;
 			}
-			else // One child case
-			*root = *temp; // Copy the contents of
-							// the non-empty child
+			else			   // One child case
+				*root = *temp; // Copy the contents of
+							   // the non-empty child
 			free(temp);
 		}
 		else
 		{
 			// node with two children: Get the inorder
 			// predecessor (largest in the left subtree)
-			struct Node* temp = maxValueNode(root->left);
+			struct Node *temp = maxValueNode(root->left);
 
 			// Copy the inorder predecessor's data to this node
 			root->key = temp->key;
@@ -205,11 +203,11 @@ struct Node* deleteNode(struct Node* root, int key)
 
 	// If the tree had only one node then return
 	if (root == NULL)
-	return root;
+		return root;
 
 	// STEP 2: Update height of current node
 	root->height = 1 + max(height(root->left),
-						height(root->right));
+						   height(root->right));
 
 	// STEP 3: Get the balance factor of this node (to
 	// check whether this node became unbalanced)
@@ -247,7 +245,7 @@ struct Node* deleteNode(struct Node* root, int key)
 // The function also prints height of every node
 void preOrder(struct Node *root)
 {
-	if(root != NULL)
+	if (root != NULL)
 	{
 		printf("%d ", root->key);
 		preOrder(root->left);
@@ -255,13 +253,12 @@ void preOrder(struct Node *root)
 	}
 }
 
-
 /* Driver program to test above function*/
 int main()
 {
-    struct Node *root = NULL;
+	struct Node *root = NULL;
 
-    /*Lets create tree:
+	/*Lets create tree:
                4
 		    /	  \
 	        2      6
@@ -272,7 +269,7 @@ int main()
                 /  \
                7    9
     */
-    
+
 	root = insert(root, 4);
 	root = insert(root, 2);
 	root = insert(root, 6);
@@ -285,7 +282,7 @@ int main()
 	root = insert(root, 9);
 	root = insert(root, 12);
 
-    /* It will convert to 
+	/* It will convert to 
                4
 		    /	   \
 	       2        8
@@ -296,14 +293,19 @@ int main()
      */
 
 	printf("Preorder traversal of the constructed AVL "
-		"tree is \n");
+		   "tree is \n");
 	preOrder(root);
 
 	root = deleteNode(root, 2);
-
 
 	printf("\nPreorder traversal after deletion of 2 \n");
 	preOrder(root);
 
 	return 0;
 }
+
+// Output:
+// Preorder traversal of the constructed AVL tree is
+// 4 2 0 3 8 6 5 7 10 9 12
+// Preorder traversal after deletion of 2
+// 4 0 3 8 6 5 7 10 9 12

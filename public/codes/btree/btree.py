@@ -225,7 +225,21 @@ B.insert(18)
 B.insert(20)
 B.insert(23)
 
+print("The B-tree is: ")
 B.print_tree(B.root)
 B.delete(B.root, 20)
-print("\n")
+print("\nThe B-tree is: ")
 B.print_tree(B.root)
+
+# Output:
+# The B-tree is:
+# Level 0 size 2 : 10 16
+# Level 1 size 2 : 8 9
+# Level 1 size 2 : 11 15
+# Level 1 size 4 : 17 18 20 23
+
+# The B-tree is:
+# Level 0 size 2 : 10 16
+# Level 1 size 2 : 8 9
+# Level 1 size 2 : 11 15
+# Level 1 size 3 : 17 18 23

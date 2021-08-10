@@ -112,3 +112,10 @@ result = []
 inorder(result, 1)
 print("Inorder Traversal is : ", result)
 print("bst array is : ", bst[1:i+1])
+
+
+# Output:
+# bst array is :  [4, 2, 6, 0, 3, 5, 10, None, None, None, None, None, None, 8, 12]
+# Inorder Traversal is :  [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+# Inorder Traversal is :  [0, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+# bst array is :  [4, 0, 6, None, 3, 5, 10, None, None, None, None, None, None, 8, 12]
