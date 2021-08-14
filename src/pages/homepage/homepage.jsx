@@ -12,13 +12,40 @@ import Typography from "@material-ui/core/Typography";
 import { List, ListItem } from "@material-ui/core";
 import BuildIcon from "@material-ui/icons/Build";
 import ListIcon from "@material-ui/icons/List";
+import { useEffect, useState } from "react";
 
 const Homepage = () => {
   const classes = useStylesHomepage();
 
+  // local states
+  const [windowSize, setWindowSize] = useState();
+  const displayWindowSize = () => {
+    // Get width and height of the window excluding scrollbars
+    var w = document.documentElement.clientWidth;
+    // Display result inside a div element
+    setWindowSize(w);
+  };
+
+  useEffect(() => {
+    displayWindowSize();
+    window.addEventListener("resize", (e) => {
+      displayWindowSize();
+    });
+    return () => {
+      window.removeEventListener("resize", (e) => console.log(e));
+    };
+  }, []);
+
   return (
     <div className={classes.root}>
-      <Timeline style={{ width: "100%" }} align="alternate">
+      <Timeline
+        style={
+          windowSize > 880
+            ? { width: "100%" }
+            : { width: "200%", transform: "translateX(-25%)" }
+        }
+        align={windowSize > 800 ? "alternate" : "left"}
+      >
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot color="primary">
