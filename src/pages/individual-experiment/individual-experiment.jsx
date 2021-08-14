@@ -93,6 +93,9 @@ const IndividualExperiment = () => {
       <div className={classes.container}>
         <Suspense fallback={<Loader />}>
           <Switch>
+            <Route exact path={match.url}>
+              <Theory param={match.params.id} />
+            </Route>
             <Route exact path={tabs[0].pathname}>
               <Theory param={match.params.id} />
             </Route>

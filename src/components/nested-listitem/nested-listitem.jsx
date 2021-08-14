@@ -20,7 +20,7 @@ const NestedListItem = ({ name, subsection }) => {
   };
 
   const changeRoute = (text) => {
-    history.push(`/experiments/${text}`);
+    history.push(`/experiments/${text}/theory`);
   };
 
   return (
