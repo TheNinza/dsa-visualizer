@@ -165,7 +165,19 @@ int main()
     addEdge(6, 8, 6);
     addEdge(7, 8, 7);
 
+    printf("Edges of MST are \n");
     primMST(V);
 
     return 0;
 }
+
+// Output:
+// Edges of MST are
+// 0 - 1
+// 1 - 2
+// 2 - 3
+// 3 - 4
+// 2 - 5
+// 5 - 6
+// 6 - 7
+// 2 - 8

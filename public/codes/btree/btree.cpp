@@ -378,3 +378,8 @@ int main() {
   cout << "\nThe B-tree is: ";
   t.traverse();
 }
+
+// Output:
+// The B-tree is:  8 9 10 11 15 16 17 18 20 23
+// Deleting 20
+// The B-tree is:  8 9 10 11 15 16 17 18 23

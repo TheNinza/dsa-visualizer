@@ -107,7 +107,19 @@ int main()
 	addEdge(adj, 6, 8, 6);
 	addEdge(adj, 7, 8, 7);
 
+	cout<<"Edges of MST are" << endl;
 	primMST(adj, V);
 
 	return 0;
 }
+
+// Output:
+// Edges of MST are
+// 0 - 1
+// 1 - 2
+// 2 - 3
+// 3 - 4
+// 2 - 5
+// 5 - 6
+// 6 - 7
+// 2 - 8

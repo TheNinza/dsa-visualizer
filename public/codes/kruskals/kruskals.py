@@ -95,3 +95,15 @@ addEdge(edges, 7, 8, 7)
 print("Edges of MST are ")
 mst_wt = kruskalMST()
 print("Weight of MST is ", mst_wt)
+
+# Output:
+# Edges of MST are
+# 6 - 7
+# 2 - 8
+# 5 - 6
+# 0 - 1
+# 2 - 5
+# 2 - 3
+# 0 - 7
+# 3 - 4
+# Weight of MST is  37

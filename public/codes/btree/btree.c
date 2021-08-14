@@ -405,9 +405,15 @@ int main()
     insertion(20);
     insertion(23);
 
+    printf("The B-tree is: ");
     traversal(root);
     printf("\nDeleting 20");
     delete (20, root);
-    printf("\n");
+    printf("\nThe B-tree is: ");
     traversal(root);
 }
+
+// Output:
+// The B-tree is: 8 9 10 11 15 16 17 18 20 23
+// Deleting 20
+// The B-tree is: 8 9 10 11 15 16 17 18 23

@@ -106,3 +106,6 @@ addEdge(g, 7, 9)
 addEdge(g, 8, 10)
 
 BFSFull(g, n)
+
+# Output:
+# BFS Order is : 0 1 2 4 3 5 6 7 9 8 10

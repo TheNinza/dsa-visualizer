@@ -220,7 +220,7 @@ root = myTree.insert(root, 12)
 #
 
 # Preorder Traversal
-print("Preorder Traversal after insertion - ")
+print("Preorder traversal of the constructed AVL tree is")
 myTree.preOrder(root)
 print()
 
@@ -228,6 +228,12 @@ print()
 root = myTree.delete(root, 2)
 
 # Preorder Traversal
-print("Preorder Traversal after deletion of 2 - ")
+print("Preorder traversal after deletion of 2")
 myTree.preOrder(root)
 print()
+
+# Output:
+# Preorder traversal of the constructed AVL tree is
+# 4 2 0 3 8 6 5 7 10 9 12
+# Preorder traversal after deletion of 2
+# 4 0 3 8 6 5 7 10 9 12
