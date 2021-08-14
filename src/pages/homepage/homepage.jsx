@@ -42,7 +42,7 @@ const Homepage = () => {
         style={
           windowSize > 880
             ? { width: "100%" }
-            : { width: "200%", transform: "translateX(-25%)" }
+            : { width: "200%", transform: "translateX(-25%)", padding: 0 }
         }
         align={windowSize > 800 ? "alternate" : "left"}
       >
