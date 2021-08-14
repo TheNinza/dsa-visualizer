@@ -10,13 +10,6 @@
     ]
   },
   {
-    "name": "Array",
-    "subSection": [
-      { "name": "One Dimentional Array", "route": "oda" },
-      { "name": "Two Dimentional Array", "route": "tda" }
-    ]
-  },
-  {
     "name": "Linked List",
     "subSection": [
       { "name": "Singly Linked List", "route": "sll" },
@@ -49,6 +42,13 @@
       { "name": "Topological Sort", "route": "topo" },
       { "name": "Kruskal's Algorithm", "route": "kruskals" },
       { "name": "Prim's Algorithm", "route": "prims" }
+    ]
+  },
+  {
+    "name": "Array",
+    "subSection": [
+      { "name": "One Dimentional Array", "route": "oda" },
+      { "name": "Two Dimentional Array", "route": "tda" }
     ]
   }
 ]
