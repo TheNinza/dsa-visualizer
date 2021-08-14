@@ -49,10 +49,6 @@ const IndividualExperiment = () => {
   // static data
   const tabs = [
     {
-      name: "Aim",
-      pathname: `${match.url}`,
-    },
-    {
       name: "Theory",
       pathname: `${match.url}/theory`,
     },
@@ -98,15 +94,12 @@ const IndividualExperiment = () => {
         <Suspense fallback={<Loader />}>
           <Switch>
             <Route exact path={tabs[0].pathname}>
-              <div>Aim</div>
-            </Route>
-            <Route exact path={tabs[1].pathname}>
               <Theory param={match.params.id} />
             </Route>
-            <Route exact path={tabs[2].pathname}>
+            <Route exact path={tabs[1].pathname}>
               <Code param={match.params.id} />
             </Route>
-            <Route exact path={tabs[3].pathname}>
+            <Route exact path={tabs[2].pathname}>
               <Visualisation param={match.params.id} />
             </Route>
           </Switch>

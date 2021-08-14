@@ -1,11 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 
-export const useStylesHomepage = makeStyles((theme) => ({
+export const useStylesFeedback = makeStyles((theme) => ({
   root: {
     marginTop: "3rem",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
     marginLeft: "5rem",
     marginRight: "5rem",
     [theme.breakpoints.down("1000")]: {
@@ -14,11 +11,15 @@ export const useStylesHomepage = makeStyles((theme) => ({
       marginTop: "2rem",
     },
   },
-
-  paper: {
-    padding: "6px 16px",
+  feedbackInput: {
+    width: "50%",
+    [theme.breakpoints.down("800")]: {
+      width: "100%",
+    },
   },
-  secondaryTail: {
-    backgroundColor: theme.palette.secondary.main,
+
+  submitButton: {
+    marginTop: "2rem",
+    display: "block",
   },
 }));

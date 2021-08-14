@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import Loader from "./components/loader/loader";
 import Navbar from "./components/navbar/navbar";
 import { Switch, Route } from "react-router-dom";
+import Feedback from "./components/feedback/feedback";
 
 // lazy imports
 const Homepage = lazy(() => import("./pages/homepage/homepage"));
@@ -30,6 +31,7 @@ function App() {
             />
             <Route exact path="/experiments" component={ExperimentList} />
             <Route path="/experiments/:id" component={IndividualExperiment} />
+            <Route exact path="/feedback" component={Feedback} />
           </Switch>
         </Suspense>
       </main>

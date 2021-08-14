@@ -46,14 +46,7 @@ const Navbar = (props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   // static data
-  const navItems = [
-    "Introduction",
-    "Objective",
-    "List of experiments",
-    "Target Audience",
-    "Course Alignment",
-    "Feedback",
-  ];
+  const navItems = ["Introduction", "List of experiments", "Feedback"];
 
   // custom functions
   const changeRoute = (text) => {
