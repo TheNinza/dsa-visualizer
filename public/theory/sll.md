@@ -8,10 +8,6 @@ One way chain or singly linked list can be traversed only in one direction. In o
 
 It requires only one list pointer variable, i.e., the head pointer pointing to the first node.
 
-### Memory space
-
-It utilizes less memory space as compare to doubly linked list.
-
 ## Description of the algorithm
 
 To create a singly linked list, we will need to start by creating two classes: Node and SinglyLinkedList
@@ -41,3 +37,7 @@ class SinglyLinkedList {
 ## Time complexity
 
 In a singly linked list, the time complexity for inserting and deleting an element from the list is O(n).
+
+### Memory space
+
+It utilizes less memory space as compare to doubly linked list.

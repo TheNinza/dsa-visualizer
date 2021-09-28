@@ -62,7 +62,7 @@ Input DATA to be inserted
 Create a NewNode
 NewNode → DATA = DATA
 NewNode → RPoint = NULL
-If (SATRT equal to NULL)
+If (START equal to NULL)
 a. START = NewNode
 
 b. NewNode → LPoint=NULL

@@ -1,6 +1,6 @@
 # What is Depth First Search?
 
-In depth-first search the idea is to travel as deep as possible from neighbour to neighbour before backtracking.
+In depth-first search the idea is to travel as deep as possible from neighbor to neighbor before backtracking.
 
 What determines how deep is possible is that you must follow edges, and you don't visit any vertex twice.
 
@@ -14,7 +14,7 @@ The discovery and finishing times have parenthesis structure .For any 2 vertices
 
 (ii)the interval [d[u],f[u]]is contained entirely within the interval [d[v],f[v]] and u is descendant of v.
 
-(iii)the interval [d[v,f[v]] is contained entirely within the interval [d[u],f[u]], and v is decendant of u.
+(iii)the interval [d[v,f[v]] is contained entirely within the interval [d[u],f[u]], and v is descendant of u.
 
 In a depth first forest of graph G=(V,E),vertex v is a descendant of vertex u if and only if at the time d[u] that the search discovers u,vertex v can be reached from is along a path consisting entirely of white vertices.
 
@@ -38,7 +38,7 @@ The algorithm also timestamps each vertex.Each vertex v has 2 timestamps:
 
      d[v]-when v is discovered(grayed) and f[v]-when search finishes examining its adjacency list (v is blackened).
 
-These time stamps are intergers between 1 and 2|v| and for every vertex u,
+These time stamps are integers between 1 and 2|v| and for every vertex u,
 
         d[u]<f[u]
 

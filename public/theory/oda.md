@@ -1,4 +1,4 @@
-# What is One Dimentional Array?
+# What is One Dimensional Array?
 
 A simple array may be created when the variables grouped together conceptually appear as a single row. This is known as a one-dimensional array.
 A single or one dimensional array declaration has the following form,
@@ -40,4 +40,4 @@ Rules For Declaring One Dimensional Array:
 
 ## Time complexity
 
-The time complexity of two dimentional array is O(n)
+The time complexity of two dimensional array is O(n)
