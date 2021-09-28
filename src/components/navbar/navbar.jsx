@@ -7,6 +7,8 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Box from "@material-ui/core/Box";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import {Switch} from "@material-ui/core";
+import {toggle} from "../../action";
 import {
   Button,
   Drawer,
@@ -18,6 +20,7 @@ import {
 import { useStylesNavbar } from "./navbar.styles";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -53,6 +56,10 @@ const Navbar = (props) => {
     const newRoute = text.toLowerCase().replace(/\s/g, "_");
     history.push(`/${newRoute}`);
   };
+  const dispatch = useDispatch()
+  const changeMode = () =>{
+    dispatch(toggle())
+  };
 
   return (
     <React.Fragment>
@@ -83,6 +90,7 @@ const Navbar = (props) => {
                     {i}
                   </Button>
                 ))}
+                <Switch onClick = {()=>{changeMode()}} />
               </Box>
             </Box>
             <IconButton
@@ -113,6 +121,7 @@ const Navbar = (props) => {
               <ListItemText primary={text} />
             </ListItem>
           ))}
+          <Switch onClick = {()=>{changeMode()}} />
         </List>
       </Drawer>
     </React.Fragment>

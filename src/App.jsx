@@ -3,6 +3,8 @@ import Loader from "./components/loader/loader";
 import Navbar from "./components/navbar/navbar";
 import { Switch, Route } from "react-router-dom";
 import Feedback from "./components/feedback/feedback";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { useSelector } from "react-redux";
 
 // lazy imports
 const Homepage = lazy(() => import("./pages/homepage/homepage"));
@@ -13,10 +15,20 @@ const ExperimentList = lazy(() =>
 const IndividualExperiment = lazy(() =>
   import("./pages/individual-experiment/individual-experiment.jsx")
 );
+  
+
 
 function App() {
+  // dark mode
+ const value = useSelector(state => state.value)
+ const theme = createMuiTheme({
+   palette: {
+     type: value ? "dark" : "light",
+   },
+ });
   return (
     <>
+    <ThemeProvider theme={theme}>
       <Navbar />
       <main>
         <Suspense fallback={<Loader />}>
@@ -35,6 +47,7 @@ function App() {
           </Switch>
         </Suspense>
       </main>
+      </ThemeProvider>
     </>
   );
 }
