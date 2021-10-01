@@ -15,7 +15,7 @@ It basically does swapping of elements if they are not in the right order depend
 ,
 
 ```python
-bubbleSort( Arr[], totat_elements)
+bubbleSort( Arr[], total_elements)
    for i = 0 to total_elements - 1 do:
       swapped = false
       for j = 0 to total_elements - i - 2 do:

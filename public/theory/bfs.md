@@ -17,7 +17,7 @@ from s to each of nodes in Li is of length i.
    node in layer Lj
 
    Lets assume,there is a given graph G=(V,E) and a source vector S, BFS
-   explore the edges of G to discover every vertex that is reactable from
+   explore the edges of G to discover every vertex that is reachable from
    s.
    Now, it is called BFS because it discovers all vertices at distance k
    from s before discovering any vertices at distance (k+1)

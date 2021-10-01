@@ -1,4 +1,4 @@
-# What is Two Dimentional Array?
+# What is Two Dimensional Array?
 
 The two-dimensional array can be defined as an array of arrays. The 2D array is organized as matrices which can be represented as the collection of rows and columns. However, 2D arrays are created to implement a relational database lookalike data structure. It provides ease of holding the bulk of data at once which can be passed to any number of functions wherever required.
 
@@ -36,4 +36,4 @@ int counts[COUNTRIES][MEDALS] =
 
 ## Time complexity
 
-The time complexity of two dimentional array is O(n^2)
+The time complexity of two dimensional array is O(n^2)
