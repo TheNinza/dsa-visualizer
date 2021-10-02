@@ -20,4 +20,23 @@ export const useStylesExperimentList = makeStyles((theme) => ({
     borderRadius: "1rem",
     color: theme.palette.primary.dark,
   },
+  Heading:{
+    [theme.breakpoints.down("900")]:{
+      fontSize:[45]
+    },
+    [theme.breakpoints.down("550")]:{
+      fontSize:[35]
+    },
+    [theme.breakpoints.down("375")]:{
+      fontSize:[30]
+    },
+    [theme.breakpoints.down("330")]:{
+      fontSize:[20]
+    },
+    [theme.breakpoints.down("240")]:{
+      fontSize:[15]
+    }
+
+
+  }
 }));

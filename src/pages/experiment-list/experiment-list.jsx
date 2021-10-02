@@ -9,7 +9,7 @@ const ExperimentList = () => {
 
   return (
     <div className={classes.root}>
-      <Typography align="center" gutterBottom color="primary" variant="h3">
+      <Typography className={classes.Heading} align="center" gutterBottom color="primary" variant="h3">
         List Of Experiments
       </Typography>
 
