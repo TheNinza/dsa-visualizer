@@ -68,7 +68,7 @@ const Navbar = (props) => {
             >
               <img
                 alt="logo"
-                height="70x"
+                height="64x"
                 src="/logo-dsa-adobe-svg.svg"
                 onClick={() => changeRoute("")}
               />
