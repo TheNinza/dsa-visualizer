@@ -68,8 +68,8 @@ const Navbar = (props) => {
             >
               <img
                 alt="logo"
-                height="60px"
-                src="https://www.iiitm.ac.in/templates/shaper_educon/images/presets/preset1/logo@2x.png"
+                height="64x"
+                src="/logo-dsa-adobe-svg.svg"
                 onClick={() => changeRoute("")}
               />
               <Box className={classes.navItemsContainer}>
