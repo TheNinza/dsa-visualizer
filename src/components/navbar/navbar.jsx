@@ -68,9 +68,8 @@ const Navbar = (props) => {
             >
               <img
                 alt="logo"
-                height="40x"
-                width="80px"
-                src="/logo-dsa-adobe.png"
+                height="70x"
+                src="/logo-dsa-adobe-svg.svg"
                 onClick={() => changeRoute("")}
               />
               <Box className={classes.navItemsContainer}>
