@@ -68,10 +68,9 @@ const Navbar = props => {
             >
               <img
                 alt="logo"
-                height="64x"
                 src="/logo-dsa-adobe-svg.svg"
                 onClick={() => changeRoute("")}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer" ,height:'auto',maxHeight:'8vh'}}
               />
               <Box className={classes.navItemsContainer}>
                 {navItems.map(i => (

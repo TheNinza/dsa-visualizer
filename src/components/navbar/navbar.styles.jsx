@@ -4,7 +4,7 @@ export const useStylesNavbar = makeStyles((theme) => ({
   navbarRoot: {
     background: theme.palette.background.default,
     color: theme.palette.primary.main,
-    height: "10vh",
+    height: "11vh",
     flexDirection: "row",
   },
   toolbar: {
