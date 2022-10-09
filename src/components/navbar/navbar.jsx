@@ -35,7 +35,7 @@ ElevationScroll.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
-const Navbar = props => {
+const Navbar = (props) => {
   // reactRouter
   const history = useHistory();
 
@@ -49,7 +49,7 @@ const Navbar = props => {
   const navItems = ["Introduction", "List of experiments", "Feedback"];
 
   // custom functions
-  const changeRoute = text => {
+  const changeRoute = (text) => {
     const newRoute = text.toLowerCase().replace(/\s/g, "_");
     history.push(`/${newRoute}`);
   };
@@ -70,10 +70,15 @@ const Navbar = props => {
                 alt="logo"
                 src="/logo-dsa-adobe-svg.svg"
                 onClick={() => changeRoute("")}
-                style={{ cursor: "pointer" ,height:'auto',maxHeight:'8vh'}}
+                style={{
+                  cursor: "pointer",
+                  height: "auto",
+                  maxHeight: "8vh",
+                  transform:"translateY(-3px)"
+                }}
               />
               <Box className={classes.navItemsContainer}>
-                {navItems.map(i => (
+                {navItems.map((i) => (
                   <Button
                     onClick={() => changeRoute(i)}
                     key={i}
@@ -103,7 +108,7 @@ const Navbar = props => {
         onClose={() => setDrawerOpen(false)}
       >
         <List className={classes.list}>
-          {navItems.map(text => (
+          {navItems.map((text) => (
             <ListItem
               button
               key={text}
